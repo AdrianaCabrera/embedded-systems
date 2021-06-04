@@ -1,0 +1,2 @@
+# embedded-systems
+According to Wikipedia, an embedded system is a computer system - a combination of processor, memory and peripheral input and output devices - with a specific function within a more extensive mechanical or electronic system. In this class, we will explore these systems to understand more about hardware and how to build different embedded systems creatively, where digital product design can have infinite possibilities.
