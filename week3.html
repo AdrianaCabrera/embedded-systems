@@ -81,16 +81,26 @@
           
                     
 	          <div class="one-column">
-	            <p>-</p>
+	            <p>mixing of Debbugging and pcb requirements</p>
 	          </div>
 
 
 		          <div class="two-column">
-		            <p>During this class we explore the following topics: 
--
-<br/><br/>
-<br/><br/>
-<br/><br/>* We introduced a way to document the projects week by week through the wikifactory platform.  </p>
+		            <p>This class covered debugging a little differently than the usual way after we had produced our PCBs. 
+
+<br/>
+<br/>To complement our PCB design, in this class we looked at how to connect a button to our board and how to program it, using Arduino and then integrating it to the PCB design schematic in EAGLE, 
+here some references of the circuit the following link,<a style="text-align: center" href="https://zenodo.org/record/1344486#.YMH2mTYzbap">using toggle</a>  
+                        <br/><a style="text-align: center" href="https://arduinogetstarted.com/tutorials/arduino-button-toggle-led">arduino button toggle led</a> 
+
+<br/>Then we enter a little Debugging topic programming our Attiny85 using our Arduino IDE as ISP
+here a link to program it. 
+                        <br/><a style="text-align: center" href="https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2586-AVR-8-bit-Microcontroller-ATtiny25-ATtiny45-ATtiny85_Datasheet.pdf">ATtiny datasheet</a>
+                        <br/><a style="text-align: center" href="http://highlowtech.org/?p=1695">Connecting the Arduino board and the ATtiny</a>
+                        <br/><a style="text-align: center" href="https://kokhana89.github.io/Fablab/Attiny.html">Connecting the Arduino board and the ATtiny sound melody</a>
+                        <br/><a style="text-align: center" href="https://wikifactory.com/+dpa/stories/arduino-communication-and-programming">more information about programming protocols by Florian Paproth  I Digital Prototyping Academy</a>
+                        <br>an excellent reference from my previous students in the <a style="text-align: center" href="https://adrianacabrera.github.io/SoftPrototyping/index.html">soft prototyping</a>g class, is the documentation work of Olena Kokhan, who made a <a style="text-align: center" href="https://kokhana89.github.io/Fablab/PostcardChristmas.htmlp">sound and light christmas card</a>, in this same way you could also document the process of her last PCB using Wikifactory. 
+ </p>
                       <li><a class="link" href="https://wikifactory.com/+embedded-systems">Wikifactory</a></li>
 		          </div>   
                  				  
@@ -98,37 +108,81 @@
                  				        
 				        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
           
-          
+          <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTqTsLExKHpcXch2eKFGnEgr5vyH0l7-A3Le2oNLo_0tULL-_htJcHaNhZQPvW5xP7ypjJRHEjricWk/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 			
             <br/><br/><br/><br/>
             <h1>Assigment: </h1>
             <br/><br/><br/><br/>
-<h3>1. </h3>
-<p> 
+      
+	          <div class="one-column">
+	            <p> Design your PCB with the following requirements </p>
+	          </div>
+ <div class="two-column">           
+<p>1.    you are going to finish the PCB design, in EAGLE with the LED parallel circuit PIN 2 and button PIN 3. 
+<br/>2.    For the best performance of the board, you are going to make a parallel circuit of 3 capacitors (1uF, 10uF and 100nF) connected to VCC and GND. 
+<br/>3.     you will connect the RESET (PIN 1) with a resistor (10K) that will be connected to VCC. 
+<br/>4.     you will connect a  6 pin header for the proframming pins 
+    <br/>*  RESET (PIN 1)
+    <br/>*  PIN 2 
+    <br/>*  PIN 3
+    <br/>*  MOSI  (PIN 5)
+    <br/>*  MISO (PIN 6)
+    <br/>* SCK (PIN 7) 
+    <br/> <br/> 
+    <br/>to add the pin header go to the command ADD and look in the components at the FAB Hello > PINHD 2X3 SMD
+     <br/><img src="img/weeks/week3/6Pinheader.png" width="100%">
+     <br/> <br/> <br/>
+    
+<br/>5.     In case you don´t have the pins you will add a 2 pin header for
+   <br/>*  VCC (PIN 8) 
+   <br/>*  GND (PIN 4) 
+    <br/><br/>
+    in the following picture you can find a similar design how should look your own SCH
+    <img src="img/weeks/week3/01SCHexplanation.png" width="100%">
+    <br/><br/>
+<br/>you will finalize your own design of the Board layout in Eagle. 
+you will try to use one of the techniques presented in the previous classes (conductive ink, copper tape).
+<br/>
+for those interested in conductive ink, please cut the stencil beforehand. 
 <br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
- <br/><br/>
-<br/><br/>SUPER IMPORTANT !!!! Finally you will document this process on wikifactory.
+<br/><br/>SUPER IMPORTANT !!!! Finally you will document this process on wikifactory.as A project this would be mandatory!!!!!  
             </p><li><a class="link" href="https://wikifactory.com/+embedded-systems">Wikifactory</a></li>
- <br/><br/><br/><br/>           
-<h3>2. optional</h3>
-            
-<p>
+  <br/><br/><br/><br/>           
+
+   </div>         
+
+ <div class="one-column">
+	            <p>2. optional</p>
+	          </div>
+  <div class="two-column">
+         <p>6.   you can change the microcontroller ATTiny485 to package SOIC8, to minimalize the board
+             <br/> <br/> 
+             <img src="img/weeks/week3/SOICFOCUS.png" width="100%">
+             <br/> <br/> 
+      <br/> you can find this component in the library "fab" under the name ATTINY45SI
+             <br/> <br/> 
+      <img src="img/weeks/week3/SOIC45.png" width="100%">
+      <br/> <br/> <br/> <br/> 
+      </p>
+     
+      <p>For those interested in getting a useful socket for programmming ATTiny DIP(THT) using the Arduino as ISP. working further with the THT(Through Hole Technology) </p>
+       
+      <li><a class="link" href="https://create.arduino.cc/projecthub/viktorsilivanov/attiny13-13a-25-45-85-programming-shield-80dc2f">ATtiny13/13a/25/45/85 Programming Shield Arduino HUB</a></li>
+      <p></p>
+      <li><a class="link" href="https://www.kreativekiste.de/attiny-45-85-mit-arduino-isp-programmieren-einfache-anleitung">Attiny 45 85 mit Arduino ISP programmieren I kreativekiste.de</a></li>    
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>  
+</div>            
+            <p>
 
 <br/><br/>have a funny week 
 
 <br/><br/>Adriana Cabrera   </p>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>         
+    <br/><br/><br/><br/><br/>         
 <h1>recap</h1>
             <br/><br/><br/><br/>
-                  
-            </div>
-        
+            <iframe width="960" height="569" src="https://www.youtube.com/embed/O6XsaUOMRbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> 
     </div>
-
-
 
   <!--Home Sidebar-->
 
